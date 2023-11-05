@@ -1,0 +1,30 @@
+{
+  "name": "alba-template-p5-javascript",
+  "version": "1.0.0",
+  "description": "A template for creating p5.js sketches",
+  "scripts": {
+    "start": "parcel index.html",
+    "example": "parcel example.html",
+    "clean": "rimraf dist .parcel-cache",
+    "build": "npm run clean && parcel build index.html"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-esbuild": "^2.10.2",
+    "@types/p5": "^1.5.0",
+    "parcel": "^2.10.2",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "p5": "^1.5.0"
+  },
+  "targets": {
+    "default": {
+      "context": "browser",
+      "optimize": true,
+      "includeNodeModules": {
+        "p5": false
+      },
+      "sourceMap": false
+    }
+  }
+}
